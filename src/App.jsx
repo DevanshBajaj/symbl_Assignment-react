@@ -13,8 +13,6 @@ function App() {
     let data = await response.json();
     setUsers(data)
   }
-  console.log(users)
-
 
   return (
     <div className="App">
