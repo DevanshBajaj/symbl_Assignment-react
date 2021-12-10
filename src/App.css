@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+  margin: 2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-clip: border-box;
+  padding: 1.6rem;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 100%;
+  border: 1px solid #272529;
+  border-radius: 28px;
+  background-color: #272529;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.card p {
+  margin: 0;
+  padding: 0.6rem;
+  text-align: left;
+}
+
+.card a {
+  color: rgba(206, 130, 142, 1);
+  margin: 0;
+  padding: 0.6rem;
+  text-align: left;
+  text-decoration: none;
+}
+
+.card:hover {
+  transition: all 0.4s ease-out;
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  top: -4px;
+  border: 1px solid #4d4b4b;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -8px;
+  right: -8px;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(2);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card:hover::before {
+  transform: scale(2.15);
+}
+
+@media (max-width: 1100px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 680px) {
+  .container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+}
