@@ -26,7 +26,6 @@ function App() {
               <p>Username: {user.username}</p>
               <p>Phone: {user.phone}</p>
               <p>E-mail: {user.email}</p>
-              <p>Website: <a href={user.website} rel="noopener">{user.website}</a></p>
             </div>
           )
         })}
